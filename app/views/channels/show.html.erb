@@ -1,0 +1,8 @@
+<h1>Channel</h1>
+
+<h2>Data</h2>
+Discord ID: <%= @channel.discord_id %><br/>
+<%= render 'channel', channel: @channel %>
+
+<h2>Messages</h2>
+<%= render 'messages', messages: @messages %>

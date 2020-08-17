@@ -12,6 +12,19 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <ul>
+      <li>
+        <%= link_to 'Home', root_path %>
+      </li>
+      <li>
+        <%= link_to 'User', current_users_path %>
+      </li>
+      <li>
+        <%= link_to 'Guilds', guilds_path %>
+      </li>
+    </ul>
+
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,7 @@
+<h1>Guild channels</h1>
+
+<h2>Guild</h2>
+<%= link_to @guild.name, @guild %>
+
+<h2>Channels</h2>
+<%= render 'channels', channels: @channels.without_parent %>

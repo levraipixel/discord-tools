@@ -1,0 +1,29 @@
+<h1>Current user guilds</h1>
+
+<h2>Data</h2>
+<ul>
+  <% @guilds.each do |guild_data| %>
+    <li>
+
+      <% if guild = Guild.find_by(discord_id: guild_data['id']) %>
+
+        <%= link_to guild do %>
+          <%= image_tag discord.icon_url(guild_data['id'], guild_data['icon']) %>
+          <%= guild.name %>
+        <% end %>
+
+      <% else %>
+
+        <%= image_tag discord.icon_url(guild_data['id'], guild_data['icon']) %>
+        <%= guild_data['name'] %>
+        <%= link_to 'Import', import_guild_path(guild_data['id']) %>
+
+      <% end %>
+
+      <% if guild_data['owner'] %> (owner)<% end %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Raw data</h2>
+<%= render 'application/data', data: @guilds %>

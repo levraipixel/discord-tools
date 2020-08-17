@@ -1,0 +1,8 @@
+<h1>Guild</h1>
+
+<h2>Data</h2>
+Discord ID: <%= @channel.discord_id %><br/>
+<%= render 'application/data', data: @guild.attributes %>
+
+<h2>Channels</h2>
+<%= link_to 'Channels', guild_channels_path(@guild.id) %>

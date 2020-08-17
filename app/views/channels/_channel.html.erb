@@ -1,0 +1,3 @@
+<%= link_to channel.name, channel %> (<%= channel.messages.count %>)
+
+<%= render 'channels', channels: channel.children %>

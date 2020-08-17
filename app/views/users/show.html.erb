@@ -1,7 +1,2 @@
-<ul>
-  <% @user.attributes.each do |k, v| %>
-    <li>
-      <b><%= k %>&nbsp;:</b> <%= v %></b>
-    </li>
-  <% end %>
-</ul>
+<h1>User</h1>
+<%= render 'application/data', data: @user %>

@@ -1,3 +1,13 @@
 <h1>Home</h1>
 
-<%= link_to "Sign in with Discord", user_discord_omniauth_authorize_path %>
+<% if user_signed_in? %>
+
+  Connected User:
+  <%= image_tag current_user.avatar_url, width: 100 %>
+  <%= current_user.discord_username %>
+
+<% else %>
+
+  <%= link_to "Sign in with Discord", user_discord_omniauth_authorize_path %>
+
+<% end %>
