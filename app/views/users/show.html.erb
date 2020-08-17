@@ -1,0 +1,7 @@
+<ul>
+  <% @user.attributes.each do |k, v| %>
+    <li>
+      <b><%= k %>&nbsp;:</b> <%= v %></b>
+    </li>
+  <% end %>
+</ul>
